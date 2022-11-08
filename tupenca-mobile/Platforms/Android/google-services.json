@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "831725694783",
+    "project_id": "tupenca-tsi2022",
+    "storage_bucket": "tupenca-tsi2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831725694783:android:bef1df0f6c54046724ad8a",
+        "android_client_info": {
+          "package_name": "com.companyname.tupenca_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831725694783-btknfr5lu5qurkp3j05sdhtup8k81g09.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwK48Vx7nmMEZJ-YsQfFF6_8kW7JUIT-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831725694783-btknfr5lu5qurkp3j05sdhtup8k81g09.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

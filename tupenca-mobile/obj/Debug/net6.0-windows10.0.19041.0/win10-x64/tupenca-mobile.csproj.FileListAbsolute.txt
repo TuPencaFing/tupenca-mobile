@@ -75,11 +75,6 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Mvvm.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Http.Features.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.EntityFrameworkCore.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.dll
@@ -103,7 +98,6 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\System.IO.Pipelines.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.CSharp.dll
@@ -335,8 +329,6 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\ucrtbase.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.SDK.NET.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\WinRT.Runtime.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\tupenca-back.Model.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\tupenca-back.Model.pdb
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\XamlC.stamp
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\tupenca-mobile.csproj.CopyComplete
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\tupenca-mobile.genruntimeconfig.cache

@@ -8,7 +8,16 @@
     <DefaultDevice>pixel_5_-_api_32</DefaultDevice>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="ListPencaEmpresaPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ProximosEventosPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="ListPencaPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="DetailsPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

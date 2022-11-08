@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         x:Class="tupenca_mobile.ListPencaPage"
-        xmlns:model="clr-namespace:tupenca_back.Model;assembly=tupenca-back.Model"
+        xmlns:model="clr-namespace:tupenca_mobile.Model.Dto"
         xmlns:viewmodel="clr-namespace:tupenca_mobile.ViewModel"
         x:DataType="viewmodel:PencaViewModel"
-        BackgroundColor="{StaticResource PrimaryColor}">
+        BackgroundColor="{StaticResource PrimaryColor}" Shell.NavBarIsVisible="true" Title="Mis Pencas">
         <Grid
         ColumnDefinitions="*,*"
         ColumnSpacing="5"
@@ -13,29 +13,37 @@
         RowSpacing="0">
             <CollectionView
             Grid.ColumnSpan="2"
-            ItemsSource="{Binding Usuarios}"
+            ItemsSource="{Binding PencasCompartidas}"
             SelectionMode="None">
                 <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:PencaCompartidaDto">
                         <Grid Padding="10">
-                            <Frame HeightRequest="125" Style="{StaticResource CardView}">
-                                <!--<Frame.GestureRecognizers>
+                            <Frame HeightRequest="100" Style="{StaticResource CardView}">
+                                <Frame.GestureRecognizers>
                                 <TapGestureRecognizer 
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MonkeysViewModel}}, Path=GoToDetailsCommand}"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:PencaViewModel}}, Path=GoToDetailsCommand}"
                                         CommandParameter="{Binding .}"/>
-                            </Frame.GestureRecognizers>-->
-                                <Grid Padding="0" ColumnDefinitions="125,*">
-                                    <!--<Image Aspect="AspectFill" Source="{Binding Image}"
-                                       WidthRequest="125"
-                                       HeightRequest="125"/>-->
+                            </Frame.GestureRecognizers>
+                                <Grid Padding="0" ColumnDefinitions="100,2.5*,*">
+                                    <Image Aspect="AspectFill" Source="logo1.png" BackgroundColor="Black"
+                                       WidthRequest="100"
+                                       HeightRequest="100"/>
                                     <VerticalStackLayout
                                     VerticalOptions="Center"
                                     Grid.Column="1"
-                                    Padding="10">
-                                        <Label  Text="{Binding Title}" />
-                                        <Label  Text="{Binding Description}" />
+                                    Padding="20">
+                                    <Label FontSize="18" Text="{Binding Title}" />
+                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding Description}" />
                                     </VerticalStackLayout>
-                                </Grid>
+
+                                <VerticalStackLayout
+                                    VerticalOptions="Center"
+                                    Grid.Column="2" 
+                                    >
+                                    <Label HorizontalTextAlignment="Center" Style="{StaticResource MediumLabel}" Text="Posicion" />
+                                    <Label  HorizontalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="#1" />
+                                </VerticalStackLayout>
+                            </Grid>
                             </Frame>
                         </Grid>
                     </DataTemplate>

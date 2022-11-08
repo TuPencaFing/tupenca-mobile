@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="tupenca_mobile.DetailsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:tupenca_mobile.Model.Dto"
+    xmlns:viewmodel="clr-namespace:tupenca_mobile.ViewModel"
+    x:DataType="viewmodel:PencaCompartidaDetailsViewModel"
+    Title="{Binding PencaCompartidaDto.Title}" BackgroundColor="{StaticResource PrimaryColor}">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid ColumnDefinitions="*,Auto,*" RowDefinitions="100, Auto">
+                <BoxView
+                    Grid.ColumnSpan="3"
+                    Background="#2c3e50"
+                    HeightRequest="100"
+                    HorizontalOptions="FillAndExpand" />
+                <Frame
+                    Grid.RowSpan="2"
+                    Grid.Column="1"
+                    Margin="0,50,0,0"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    HorizontalOptions="Center" 
+                    Padding="0"
+                    IsClippedToBounds="True"
+                    CornerRadius="80">
+                    <Image
+                        Aspect="AspectFill"
+                        HeightRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Source="https://image.shutterstock.com/image-photo/soccer-ball-cleats-on-football-260nw-103330400.jpg"
+                        BackgroundColor="Black"
+                        WidthRequest="100"/>
+                </Frame>
+                <Label VerticalOptions="End"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       Style="{StaticResource MediumLabel}"
+                       Text="{Binding PencaCompartidaDto.Pozo, StringFormat='Pozo: {0}'}" HorizontalOptions="Center" TextColor="White"/>
+                <Label VerticalOptions="End"
+                       Grid.Column="2"
+                       Grid.Row="0"
+                       Style="{StaticResource MediumLabel}"
+                       Text="{Binding PencaCompartidaDto.CostEntry, StringFormat='Costo: {0}'}" HorizontalOptions="Center" TextColor="White"/>
+
+            </Grid>
+            <CollectionView
+            Grid.ColumnSpan="2"
+            ItemsSource="{Binding UsuariosScore}"
+            SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:UsuarioScoreDTO">
+                        <Grid Padding="10">
+                            <Frame HeightRequest="80"
+                                   Style="{StaticResource CardView}">
+                                <Grid Padding="0"
+                                      ColumnDefinitions="70,50,*,*"
+                                      >
+                                    <Label Grid.Column="0" Style="{StaticResource LargeLabel}"
+                                           Text="1"
+                                           VerticalOptions="Center" HorizontalOptions="Center"/>
+                                    <Frame Grid.Column="1"
+                                           HeightRequest="50"
+                                           WidthRequest="50"
+                                           HorizontalOptions="Center"
+                                           Padding="0"
+                                           IsClippedToBounds="True"
+                                           CornerRadius="30">
+                                        <Image Aspect="AspectFill"
+                                               HeightRequest="50"
+                                               WidthRequest="50"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"
+                                               Source="je.png"
+                                               BackgroundColor="Black"/>
+                                    </Frame>
+                                        <Label VerticalOptions="Center"
+                                                         Grid.Column="2"
+                                                         Padding="10" Style="{StaticResource LargeLabel}"
+                                               Text="{Binding UserName}"/>
+                                    <Label VerticalOptions="Center" HorizontalOptions="End"
+                                                         Grid.Column="3"
+                                                         Padding="0,0,30,0" Style="{StaticResource LargeLabel}"
+                                               Text="{Binding TotalScore, StringFormat='{0} pts'}"/>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

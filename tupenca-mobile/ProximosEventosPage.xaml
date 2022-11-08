@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="tupenca_mobile.ProximosEventosPage"
+        xmlns:model="clr-namespace:tupenca_mobile.Model.Dto"
+        xmlns:viewmodel="clr-namespace:tupenca_mobile.ViewModel"
+        x:DataType="viewmodel:PencaViewModel"
+        BackgroundColor="{StaticResource PrimaryColor}" Shell.NavBarIsVisible="true">
+    <Grid
+        ColumnDefinitions="*,*"
+        ColumnSpacing="5"
+        RowDefinitions="*,Auto"
+        RowSpacing="0">
+        <CollectionView
+            Grid.ColumnSpan="2"
+            ItemsSource="{Binding ProximosEventos}"
+            SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:EventoPrediccionDto">
+                    <Grid Padding="10">
+                        <Frame HeightRequest="125" Style="{StaticResource CardView}">
+                            <Grid Padding="0" ColumnDefinitions="*,*,*" RowDefinitions="*,10,20">
+                                <VerticalStackLayout
+
+                                    VerticalOptions="Center"
+                                    Grid.Column="0"
+                                    Padding="10">
+                                    <Label HorizontalTextAlignment="Center" Text="{Binding EquipoLocal.Nombre}" />
+                                    <Entry Text="{Binding Prediccion.PuntajeEquipoLocal, TargetNullValue= 0}" x:Name="equipolocal"
+                                        Keyboard="Numeric" Margin="30,0,30,0"/>
+                                </VerticalStackLayout>
+
+                                <Button Text="Ingresar"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                    Grid.Column="1" BackgroundColor="{StaticResource diu}"/>
+
+                                <VerticalStackLayout
+
+                                    VerticalOptions="Center"
+                                    Grid.Column="2"
+                                    Padding="10">
+                                    <Label HorizontalTextAlignment="Center" Text="{Binding EquipoVisitante.Nombre}" />
+                                    <Entry Text="{Binding Prediccion.PuntajeEquipoVisitante, TargetNullValue= 0}" x:Name="equipovisitante"
+                                        Keyboard="Numeric" Margin="30,0,30,0"/>
+                                    
+                                </VerticalStackLayout>
+                                <BoxView 
+                                        Grid.Row="1" Grid.ColumnSpan="3"
+                                        HeightRequest="1"
+                                        Color="Red"
+                                        Margin ="0, 0, 0, 0" />
+                                <Label  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" Text="{Binding FechaInicial}" />
+
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

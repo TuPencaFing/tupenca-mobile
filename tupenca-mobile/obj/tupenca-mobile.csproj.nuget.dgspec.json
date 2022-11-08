@@ -4,80 +4,6 @@
     "C:\\Users\\mati9\\Desktop\\tupenca-mobile\\tupenca-mobile\\tupenca-mobile.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mati9\\Desktop\\tupenca-back\\tupenca-back.Model\\tupenca-back.Model.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\mati9\\Desktop\\tupenca-back\\tupenca-back.Model\\tupenca-back.Model.csproj",
-        "projectName": "tupenca-back.Model",
-        "projectPath": "C:\\Users\\mati9\\Desktop\\tupenca-back\\tupenca-back.Model\\tupenca-back.Model.csproj",
-        "packagesPath": "C:\\Users\\mati9\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mati9\\Desktop\\tupenca-back\\tupenca-back.Model\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\mati9\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Http.Features": {
-              "target": "Package",
-              "version": "[5.0.17, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.10, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "C:\\Users\\mati9\\Desktop\\tupenca-mobile\\tupenca-mobile\\tupenca-mobile.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -110,35 +36,19 @@
         "frameworks": {
           "net6.0-android31.0": {
             "targetAlias": "net6.0-android",
-            "projectReferences": {
-              "C:\\Users\\mati9\\Desktop\\tupenca-back\\tupenca-back.Model\\tupenca-back.Model.csproj": {
-                "projectPath": "C:\\Users\\mati9\\Desktop\\tupenca-back\\tupenca-back.Model\\tupenca-back.Model.csproj"
-              }
-            }
+            "projectReferences": {}
           },
           "net6.0-ios15.4": {
             "targetAlias": "net6.0-ios",
-            "projectReferences": {
-              "C:\\Users\\mati9\\Desktop\\tupenca-back\\tupenca-back.Model\\tupenca-back.Model.csproj": {
-                "projectPath": "C:\\Users\\mati9\\Desktop\\tupenca-back\\tupenca-back.Model\\tupenca-back.Model.csproj"
-              }
-            }
+            "projectReferences": {}
           },
           "net6.0-maccatalyst15.4": {
             "targetAlias": "net6.0-maccatalyst",
-            "projectReferences": {
-              "C:\\Users\\mati9\\Desktop\\tupenca-back\\tupenca-back.Model\\tupenca-back.Model.csproj": {
-                "projectPath": "C:\\Users\\mati9\\Desktop\\tupenca-back\\tupenca-back.Model\\tupenca-back.Model.csproj"
-              }
-            }
+            "projectReferences": {}
           },
           "net6.0-windows10.0.19041": {
             "targetAlias": "net6.0-windows10.0.19041.0",
-            "projectReferences": {
-              "C:\\Users\\mati9\\Desktop\\tupenca-back\\tupenca-back.Model\\tupenca-back.Model.csproj": {
-                "projectPath": "C:\\Users\\mati9\\Desktop\\tupenca-back\\tupenca-back.Model\\tupenca-back.Model.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -168,6 +78,18 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "Xamarin.Firebase.Messaging": {
+              "target": "Package",
+              "version": "[123.0.8, )"
+            },
+            "Xamarin.Google.Dagger": {
+              "target": "Package",
+              "version": "[2.41.0.2, )"
+            },
+            "Xamarin.GooglePlayServices.Base": {
+              "target": "Package",
+              "version": "[118.1.0, )"
             }
           },
           "imports": [

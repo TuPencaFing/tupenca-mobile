@@ -6,23 +6,28 @@
     xmlns:local="clr-namespace:tupenca_mobile"
     Shell.FlyoutBehavior="Disabled"
     xmlns:view ="clr-namespace:tupenca_mobile">
+    <!---->
 
 
     <ShellItem Route="main">
         <ShellContent ContentTemplate="{DataTemplate view:MainPage}" />
     </ShellItem>
 
-    <TabBar Route="list">
-        <Tab Title="Monkeys">
-            <ShellContent
+    <TabBar  Route="list">
+        <Tab  Title="Pencas">
+            <ShellContent Title="Pencas Compartidas"
+                         ContentTemplate="{DataTemplate view:ListPencaPage}"/>
+            <ShellContent Title="Pencas Empresa"
+                         ContentTemplate="{DataTemplate view:ListPencaPage}"/>
+            <!--<ShellContent
         Title="Monkeys"
         ContentTemplate="{DataTemplate view:ListPencaPage}"
-        Route="TherapyPage" />
+        Route="TherapyPage" />-->
         </Tab>
-        <Tab Title="About">
-            <ShellContent
-        Title="Monkeys"
-        ContentTemplate="{DataTemplate view:ListPencaPage}"
+        <Tab  Title="Eventos">
+            <ShellContent 
+        Title="Proximos Eventos"
+        ContentTemplate="{DataTemplate view:ProximosEventosPage}"
         Route="StatusPage" />
         </Tab>
     </TabBar>

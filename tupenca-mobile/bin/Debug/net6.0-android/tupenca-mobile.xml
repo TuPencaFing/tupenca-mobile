@@ -4,6 +4,9 @@
         <name>tupenca-mobile</name>
     </assembly>
     <members>
+        <member name="P:tupenca_mobile.ViewModel.PencaCompartidaDetailsViewModel.PencaCompartidaDto">
+            <inheritdoc cref="F:tupenca_mobile.ViewModel.PencaCompartidaDetailsViewModel.pencaCompartidaDto"/>
+        </member>
         <member name="P:tupenca_mobile.ViewModel.PencaViewModel.IsLoggedIn">
             <inheritdoc cref="F:tupenca_mobile.ViewModel.PencaViewModel.isLoggedIn"/>
         </member>
@@ -13,17 +16,17 @@
         <member name="P:tupenca_mobile.ViewModel.PencaViewModel.Password">
             <inheritdoc cref="F:tupenca_mobile.ViewModel.PencaViewModel.password"/>
         </member>
-        <member name="F:tupenca_mobile.ViewModel.PencaViewModel.getMonkeysCommand">
-            <summary>The backing field for <see cref="P:tupenca_mobile.ViewModel.PencaViewModel.GetMonkeysCommand"/>.</summary>
-        </member>
-        <member name="P:tupenca_mobile.ViewModel.PencaViewModel.GetMonkeysCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:tupenca_mobile.ViewModel.PencaViewModel.GetMonkeysAsync"/>.</summary>
-        </member>
         <member name="F:tupenca_mobile.ViewModel.PencaViewModel.loginCommand">
             <summary>The backing field for <see cref="P:tupenca_mobile.ViewModel.PencaViewModel.LoginCommand"/>.</summary>
         </member>
         <member name="P:tupenca_mobile.ViewModel.PencaViewModel.LoginCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:tupenca_mobile.ViewModel.PencaViewModel.LoginAsync(System.Object)"/>.</summary>
+        </member>
+        <member name="F:tupenca_mobile.ViewModel.PencaViewModel.goToDetailsCommand">
+            <summary>The backing field for <see cref="P:tupenca_mobile.ViewModel.PencaViewModel.GoToDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:tupenca_mobile.ViewModel.PencaViewModel.GoToDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:tupenca_mobile.ViewModel.PencaViewModel.GoToDetails(tupenca_mobile.Model.Dto.PencaCompartidaDto)"/>.</summary>
         </member>
         <member name="P:MonkeyFinder.ViewModel.BaseViewModel.IsBusy">
             <inheritdoc cref="F:MonkeyFinder.ViewModel.BaseViewModel.isBusy"/>

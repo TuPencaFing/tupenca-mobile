@@ -9,7 +9,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using tupenca_mobile.Model;
-using tupenca_back.Model;
+using tupenca_mobile.Model.Dto;
 
 namespace tupenca_mobile.Services
 {
@@ -20,7 +20,9 @@ namespace tupenca_mobile.Services
         HttpClient _client;
         JsonSerializerOptions _serializerOptions;
         private string accessToken;
-        public List<PencaCompartida> userList { get; private set; }
+        public List<PencaCompartidaDto> userList { get; private set; }
+        public List<EventoPrediccionDto> eventoList { get; private set; }
+
 
         public RestService()
         {
@@ -36,11 +38,11 @@ namespace tupenca_mobile.Services
                 WriteIndented = true
             };
         }
-        public async Task<List<PencaCompartida>> RefreshDataAsync()
+        public async Task<List<PencaCompartidaDto>> RefreshDataAsync()
         {
-            userList = new List<PencaCompartida>();
+            userList = new List<PencaCompartidaDto>();
 
-            Uri uri = new Uri(string.Format("https://10.0.2.2:7028/api/pencas-compartidas", string.Empty));
+            Uri uri = new Uri(string.Format("https://10.0.2.2:7028/api/pencas-compartidas/me", string.Empty));
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(uri);
@@ -56,6 +58,50 @@ namespace tupenca_mobile.Services
             }
 
             return userList;
+        }
+
+        public async Task<List<EventoPrediccionDto>> getEventosProximos()
+        {
+            eventoList = new List<EventoPrediccionDto>();
+            //CHANGEEEEE
+            Uri uri = new Uri(string.Format("https://10.0.2.2:7028/api/eventos/misproximos?penca=1", string.Empty));
+            try
+            {
+                HttpResponseMessage response = await _client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    eventoList = JsonSerializer.Deserialize<List<EventoPrediccionDto>>(content, _serializerOptions);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"\tERROR {0}", ex.Message);
+            }
+
+            return eventoList;
+        }
+
+        public async Task<List<UsuarioScoreDTO>> getUsersByPenca(int pencaid)
+        {
+            var usuarioScoreList = new List<UsuarioScoreDTO>();
+
+            Uri uri = new Uri(string.Format($"https://10.0.2.2:7028/api/pencas-compartidas/{pencaid}/usuarios", string.Empty));
+            try
+            {
+                HttpResponseMessage response = await _client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    usuarioScoreList = JsonSerializer.Deserialize<List<UsuarioScoreDTO>>(content, _serializerOptions);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"\tERROR {0}", ex.Message);
+            }
+
+            return usuarioScoreList;
         }
 
         public async Task Login(string username, string password)

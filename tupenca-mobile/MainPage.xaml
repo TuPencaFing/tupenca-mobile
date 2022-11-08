@@ -5,7 +5,7 @@
              xmlns:model="clr-namespace:tupenca_mobile.Model"
              xmlns:viewmodel="clr-namespace:tupenca_mobile.ViewModel"
              x:DataType="viewmodel:PencaViewModel"
-             BackgroundColor="{StaticResource PrimaryColor}">
+             BackgroundColor="{StaticResource diu}" Shell.NavBarIsVisible="false">
  
 
     <Grid>
@@ -39,7 +39,7 @@
             </StackLayout>
 
             <Button Margin="0,15" BackgroundColor="{StaticResource SecondaryColor}"
-                    Text="Sign in" TextColor="{StaticResource PrimaryColor}" FontFamily="OpenSansBold" Command="{Binding LoginCommand}" >
+                    Text="Sign in" TextColor="{StaticResource diu}" FontFamily="OpenSansBold" Command="{Binding LoginCommand}" >
             </Button>
 
             <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal">
