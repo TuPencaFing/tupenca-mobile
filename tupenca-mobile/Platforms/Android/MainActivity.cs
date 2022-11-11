@@ -3,8 +3,8 @@ using Android.Content.PM;
 using Android.OS;
 
 namespace tupenca_mobile;
-
-[Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
+//TODO remove single task
+[Activity(Theme = "@style/Maui.SplashTheme", LaunchMode = LaunchMode.SingleTask, MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
 public class MainActivity : MauiAppCompatActivity
 {
     internal static readonly string Channel_ID = "TestChannel";
@@ -17,13 +17,13 @@ public class MainActivity : MauiAppCompatActivity
         {
             foreach (var key in Intent.Extras.KeySet())
             {
-                if (key == "NavigationID")
+                if (key == "pencaId")
                 {
                     string idValue = Intent.Extras.GetString(key);
-                    if (Preferences.ContainsKey("NavigationID"))
-                        Preferences.Remove("NavigationID");
+                    if (Preferences.ContainsKey("pencaId"))
+                        Preferences.Remove("pencaId");
 
-                    Preferences.Set("NavigationID", idValue);
+                    Preferences.Set("pencaId", idValue);
                 }
             }
         }

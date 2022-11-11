@@ -42,25 +42,25 @@ namespace tupenca_mobile.Platforms.Android.Services
         private void SendNotification(string messageBody, string title, IDictionary<string, string> data)
         {
 
-            //var intent = new Intent(this, typeof(MainActivity));
-            //intent.AddFlags(ActivityFlags.ClearTop);
+            var intent = new Intent(this, typeof(MainActivity));
+            intent.AddFlags(ActivityFlags.ClearTop);
 
-            //foreach (var key in data.Keys)
-            //{
-            //    string value = data[key];
-            //    intent.PutExtra(key, value);
-            //}
+            foreach (var key in data.Keys)
+            {
+                string value = data[key];
+                intent.PutExtra(key, value);
+            }
 
-            //var pendingIntent = PendingIntent.GetActivity(this,
-            //    MainActivity.NotificationID, intent, PendingIntentFlags.OneShot);
+            var pendingIntent = PendingIntent.GetActivity(this,
+                MainActivity.NotificationID, intent, PendingIntentFlags.Mutable);
 
             var notificationBuilder = new NotificationCompat.Builder(this, MainActivity.Channel_ID)
                 .SetContentTitle(title)
                 .SetSmallIcon(Resource.Mipmap.appicon)
                 .SetContentText(messageBody)
                 .SetChannelId(MainActivity.Channel_ID)
-                //.SetContentIntent(pendingIntent)
-                //.SetAutoCancel(true)
+                .SetContentIntent(pendingIntent)
+                .SetAutoCancel(true)
                 .SetPriority((int)NotificationPriority.Max);
 
             var notificationManager = NotificationManagerCompat.From(this);
