@@ -9,6 +9,13 @@ public partial class ListPencaPage : ContentPage
 	{
 		InitializeComponent();
 		BindingContext = viewModel;
-	}
+    }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        var vm = this.BindingContext as PencaViewModel;
+        if (vm == null) return;
+        vm.checkNotifiaction();
+    }
 }
 

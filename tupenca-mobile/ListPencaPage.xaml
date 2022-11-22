@@ -36,13 +36,13 @@
                                     <Label Style="{StaticResource SmallLabel}" Text="{Binding Description}" />
                                     </VerticalStackLayout>
 
-                                <VerticalStackLayout
+                                <!--<VerticalStackLayout
                                     VerticalOptions="Center"
                                     Grid.Column="2" 
                                     >
                                     <Label HorizontalTextAlignment="Center" Style="{StaticResource MediumLabel}" Text="Posicion" />
                                     <Label  HorizontalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="#1" />
-                                </VerticalStackLayout>
+                                </VerticalStackLayout>-->
                             </Grid>
                             </Frame>
                         </Grid>

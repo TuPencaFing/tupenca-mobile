@@ -4,59 +4,110 @@
         x:Class="tupenca_mobile.ProximosEventosPage"
         xmlns:model="clr-namespace:tupenca_mobile.Model.Dto"
         xmlns:viewmodel="clr-namespace:tupenca_mobile.ViewModel"
-        x:DataType="viewmodel:PencaViewModel"
+        x:DataType="viewmodel:PencaCompartidaDetailsViewModel"
+        Title="{Binding Title}"
         BackgroundColor="{StaticResource PrimaryColor}" Shell.NavBarIsVisible="true">
     <Grid
-        ColumnDefinitions="*,*"
-        ColumnSpacing="5"
+        ColumnDefinitions="*,*,*,*"
         RowDefinitions="*,Auto"
         RowSpacing="0">
-        <CollectionView
+        <ScrollView Grid.ColumnSpan="4">
+            <VerticalStackLayout>
+                <Grid ColumnDefinitions="*,Auto,*" RowDefinitions="100, Auto">
+                    <BoxView
+                        Grid.ColumnSpan="3"
+                        Background="#2c3e50"
+                        HeightRequest="100"
+                        HorizontalOptions="FillAndExpand" />
+                    <Frame
+                        Grid.RowSpan="2"
+                        Grid.Column="1"
+                        Margin="0,50,0,0"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center" 
+                        Padding="0"
+                        IsClippedToBounds="True"
+                        CornerRadius="80">
+                        <Image
+                            Aspect="AspectFill"
+                            HeightRequest="100"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Source="https://image.shutterstock.com/image-photo/soccer-ball-cleats-on-football-260nw-103330400.jpg"
+                            BackgroundColor="Black"
+                            WidthRequest="100"/>
+                    </Frame>
+                    <Label VerticalOptions="End"
+                           Grid.Column="0"
+                           Grid.Row="0"
+                           Style="{StaticResource MediumLabel}"
+                           Text="{Binding MyPosition, StringFormat='Posicion:{0}'}" HorizontalOptions="Center" TextColor="White"/>
+                    <Label VerticalOptions="End"
+                           Grid.Column="2"
+                           Grid.Row="0"
+                           Style="{StaticResource MediumLabel}"
+                           Text="{Binding Costo, StringFormat='Costo: {0}'}" HorizontalOptions="Center" TextColor="White"/>
+
+                </Grid>
+                <CollectionView
             Grid.ColumnSpan="2"
             ItemsSource="{Binding ProximosEventos}"
-            SelectionMode="None">
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="model:EventoPrediccionDto">
-                    <Grid Padding="10">
-                        <Frame HeightRequest="125" Style="{StaticResource CardView}">
-                            <Grid Padding="0" ColumnDefinitions="*,*,*" RowDefinitions="*,10,20">
-                                <VerticalStackLayout
+            SelectionMode="None" x:Name="mCollectionView">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:EventoPrediccionDto">
+                            <Grid Padding="10">
+                                <Frame HeightRequest="125" Style="{StaticResource CardView}">
+                                    <Grid Padding="0" ColumnDefinitions="*,*,*" RowDefinitions="*,10,20">
+                                        <VerticalStackLayout
 
                                     VerticalOptions="Center"
                                     Grid.Column="0"
                                     Padding="10">
-                                    <Label HorizontalTextAlignment="Center" Text="{Binding EquipoLocal.Nombre}" />
-                                    <Entry Text="{Binding Prediccion.PuntajeEquipoLocal, TargetNullValue= 0}" x:Name="equipolocal"
+                                            <Label HorizontalTextAlignment="Center" Text="{Binding EquipoLocal.Nombre}" />
+                                            <Entry Text="{Binding Prediccion.PuntajeEquipoLocal}" x:Name="equipolocal"
                                         Keyboard="Numeric" Margin="30,0,30,0"/>
-                                </VerticalStackLayout>
+                                        </VerticalStackLayout>
 
-                                <Button Text="Ingresar"
+                                        <Button Text="Ingresar"
                                     VerticalOptions="Center"
                                     HorizontalOptions="Center"
-                                    Grid.Column="1" BackgroundColor="{StaticResource diu}"/>
+                                    Grid.Column="1" BackgroundColor="{StaticResource diu}"
+                                    Command="{Binding  Path= BindingContext.IngresarResultadoCommand,Source={Reference mCollectionView }}"  CommandParameter="{Binding .}"  
+           
+                                                />
 
-                                <VerticalStackLayout
+                                        <VerticalStackLayout
 
                                     VerticalOptions="Center"
                                     Grid.Column="2"
                                     Padding="10">
-                                    <Label HorizontalTextAlignment="Center" Text="{Binding EquipoVisitante.Nombre}" />
-                                    <Entry Text="{Binding Prediccion.PuntajeEquipoVisitante, TargetNullValue= 0}" x:Name="equipovisitante"
+                                            <Label HorizontalTextAlignment="Center" Text="{Binding EquipoVisitante.Nombre}" />
+                                            <Entry Text="{Binding Prediccion.PuntajeEquipoVisitante}" x:Name="equipovisitante"
                                         Keyboard="Numeric" Margin="30,0,30,0"/>
-                                    
-                                </VerticalStackLayout>
-                                <BoxView 
+
+                                        </VerticalStackLayout>
+                                        <BoxView 
                                         Grid.Row="1" Grid.ColumnSpan="3"
                                         HeightRequest="1"
                                         Color="Red"
                                         Margin ="0, 0, 0, 0" />
-                                <Label  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" Text="{Binding FechaInicial}" />
+                                        <Label  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" Text="{Binding FechaInicial}" />
 
+                                    </Grid>
+                                </Frame>
                             </Grid>
-                        </Frame>
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+        <Button Text="Return" 
+                Grid.Row="1"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Command="{Binding BackAsyncCommand}"
+                Style="{StaticResource ButtonOutline}"
+                Margin="8"/>
     </Grid>
 </ContentPage>

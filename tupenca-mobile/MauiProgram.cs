@@ -21,8 +21,9 @@ public static class MauiProgram
         builder.Services.AddSingleton<PencaViewModel>();
         builder.Services.AddSingleton<MainPage>();
         builder.Services.AddSingleton<ListPencaPage>();
-        builder.Services.AddSingleton<ProximosEventosPage>();
-        builder.Services.AddTransient<PencaCompartidaDetailsViewModel>();
+        builder.Services.AddSingleton<ProfilePage>();
+        builder.Services.AddTransient<ProximosEventosPage>();
+        builder.Services.AddScoped<PencaCompartidaDetailsViewModel>();
         builder.Services.AddTransient<DetailsPage>();
 
         return builder.Build();

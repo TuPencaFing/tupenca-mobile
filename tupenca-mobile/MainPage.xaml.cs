@@ -16,20 +16,6 @@ public partial class MainPage : ContentPage
 			_deviceToken = Preferences.Get("DeviceToken","");
 			viewModel._deviceToken = _deviceToken;
 		}
-
-        if (Preferences.ContainsKey("pencaId"))
-        {
-            string id = Preferences.Get("pencaId", "");
-            if (id == "1")
-            {
-                //AppShell.Current.GoToAsync(nameof(NewPage1));
-            }
-            if (id == "2")
-            {
-                //AppShell.Current.GoToAsync(nameof(NewPage2));
-            }
-            Preferences.Remove("pencaId");
-        }
     }
 
 	private void OnLogin(object sender, EventArgs e)

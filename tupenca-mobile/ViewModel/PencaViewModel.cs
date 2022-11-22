@@ -28,7 +28,7 @@ namespace tupenca_mobile.ViewModel
         [ObservableProperty]
         string password;
         public ObservableCollection<PencaCompartidaDto> PencasCompartidas { get; } = new();
-        public ObservableCollection<EventoPrediccionDto> ProximosEventos { get; } = new();
+
 
         RestService restService;
 
@@ -60,27 +60,7 @@ namespace tupenca_mobile.ViewModel
 
         }
 
-        async Task GetProximosEventosAsync()
-        {
 
-            try
-            {
-                var eventos = await restService.getEventosProximos();
-
-                if (eventos.Count != 0)
-                    ProximosEventos.Clear();
-
-                foreach (var evento in eventos)
-                    ProximosEventos.Add(evento);
-
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Unable to get eventos: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
-            }
-
-        }
 
         [RelayCommand]
         async Task LoginAsync(object args)
@@ -89,7 +69,6 @@ namespace tupenca_mobile.ViewModel
             try
             {
                 await restService.Login(username, password);
-
             }
             catch (Exception ex)
             {
@@ -130,15 +109,17 @@ namespace tupenca_mobile.ViewModel
             if (penca == null)
                 return;
 
-            await Shell.Current.GoToAsync(nameof(DetailsPage), true, new Dictionary<string, object>
-        {
-            {"PencaCompartidaDto", penca }
-        });
+            //    await Shell.Current.GoToAsync(nameof(DetailsPage), true, new Dictionary<string, object>
+            //{
+            //    {"PencaCompartidaDto", penca }
+            //});
+            //var stringPencaDto = Newtonsoft.Json.JsonConvert.SerializeObject(penca);
+            var a = Shell.Current.CurrentState.Location.ToString();
+            await Shell.Current.GoToAsync($"//proximosEventos?PencaCompartidaId={penca.Id}&Title={penca.Title}&Pozo={penca.Pozo}&Costo={penca.CostEntry}");
         }
         void HandleConnection(object sender, EventArgs a)
         {
             GetPencasCompartidasAsync();
-            GetProximosEventosAsync();
         }
 
 

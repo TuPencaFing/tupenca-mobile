@@ -4,17 +4,17 @@ namespace tupenca_mobile;
 
 public partial class DetailsPage : ContentPage
 {
-    PencaCompartidaDetailsViewModel viewModel;
     public DetailsPage(PencaCompartidaDetailsViewModel viewModel)
     {
         InitializeComponent();
         BindingContext = viewModel;
-        this.viewModel = viewModel;
+    }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        var vm = this.BindingContext as PencaCompartidaDetailsViewModel;
+        if (vm == null) return;
+        vm.checkNotifiaction();
     }
 
-    protected override void OnNavigatedTo(NavigatedToEventArgs args)
-    {
-        base.OnNavigatedTo(args);
-        viewModel.getUsuariosByPencaAsync();
-    }
 }

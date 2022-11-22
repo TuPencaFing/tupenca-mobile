@@ -11184,8 +11184,9 @@ public final class R {
     public static final int splash=0x7f0700b0;
     public static final int test_custom_background=0x7f0700b1;
     public static final int test_level_drawable=0x7f0700b2;
-    public static final int tooltip_frame_dark=0x7f0700b3;
-    public static final int tooltip_frame_light=0x7f0700b4;
+    public static final int timeline=0x7f0700b3;
+    public static final int tooltip_frame_dark=0x7f0700b4;
+    public static final int tooltip_frame_light=0x7f0700b5;
   }
   public static final class id {
     public static final int ALT=0x7f080000;
@@ -11930,10 +11931,6 @@ public final class R {
     public static final int appicon_background=0x7f0d0001;
     public static final int appicon_foreground=0x7f0d0002;
     public static final int appicon_round=0x7f0d0003;
-    public static final int logo1=0x7f0d0004;
-    public static final int logo1_background=0x7f0d0005;
-    public static final int logo1_foreground=0x7f0d0006;
-    public static final int logo1_round=0x7f0d0007;
   }
   public static final class plurals {
     public static final int mtrl_badge_content_description=0x7f0e0000;

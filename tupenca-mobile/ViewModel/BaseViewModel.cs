@@ -16,6 +16,8 @@ public partial class BaseViewModel : ObservableObject
     [ObservableProperty]
     bool isBusy = false;
 
+    public int myId;
+
     [ObservableProperty]
     string title;
 
@@ -33,5 +35,17 @@ public partial class BaseViewModel : ObservableObject
         {
             await Shell.Current.GoToAsync("//main");
         });
+    }
+
+    public async void checkNotifiaction()
+    {
+        if (Preferences.ContainsKey("pencaId"))
+        {
+            string id = Preferences.Get("pencaId", "");
+            var penca = await restService.getPenca(int.Parse(id));
+            //GoToDetails(penca);
+            await Shell.Current.GoToAsync($"//proximosEventos?PencaCompartidaId={penca.Id}&Title={penca.Title}&Pozo={penca.Pozo}&Costo={penca.CostEntry}");
+            Preferences.Remove("pencaId");
+        }
     }
 }

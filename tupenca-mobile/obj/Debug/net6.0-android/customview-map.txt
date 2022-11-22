@@ -4,8 +4,6 @@
 {urn:oasis:names:tc:xliff:document:1.2}g;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\lp\198\jl\res\values\values.xml
 adaptive-icon;obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 adaptive-icon;obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
-adaptive-icon;obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\logo1.xml
-adaptive-icon;obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\logo1_round.xml
 alpha;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\lp\174\jl\res\anim\enterfromleft.xml
 alpha;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\lp\174\jl\res\anim\exittoleft.xml
 alpha;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\lp\177\jl\res\anim\nav_default_enter_anim.xml
@@ -22,8 +20,6 @@ attr;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-andro
 attr;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\lp\197\jl\res\values\values.xml
 background;obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 background;obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
-background;obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\logo1.xml
-background;obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\logo1_round.xml
 bitmap;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\lp\197\jl\res\drawable\common_google_signin_btn_icon_dark_normal.xml
 bitmap;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\lp\197\jl\res\drawable\common_google_signin_btn_icon_disabled.xml
 bitmap;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\lp\197\jl\res\drawable\common_google_signin_btn_icon_light_normal.xml
@@ -212,8 +208,6 @@ external-cache-path;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Deb
 external-path;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\lp\178\jl\res\xml\microsoft_maui_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 foreground;obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
-foreground;obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\logo1.xml
-foreground;obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\logo1_round.xml
 integer;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\lp\198\jl\res\values\values.xml
 item;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\lp\175\jl\res\values\styles.xml
 item;C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\lp\177\jl\res\drawable\maui_splash.xml

@@ -8010,10 +8010,13 @@ namespace tupenca_mobile
 			public const int test_level_drawable = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int tooltip_frame_dark = 2131165363;
+			public const int timeline = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int tooltip_frame_light = 2131165364;
+			public const int tooltip_frame_dark = 2131165364;
+			
+			// aapt resource value: 0x7F0700B5
+			public const int tooltip_frame_light = 2131165365;
 			
 			static Drawable()
 			{
@@ -10288,18 +10291,6 @@ namespace tupenca_mobile
 			
 			// aapt resource value: 0x7F0D0003
 			public const int appicon_round = 2131558403;
-			
-			// aapt resource value: 0x7F0D0004
-			public const int logo1 = 2131558404;
-			
-			// aapt resource value: 0x7F0D0005
-			public const int logo1_background = 2131558405;
-			
-			// aapt resource value: 0x7F0D0006
-			public const int logo1_foreground = 2131558406;
-			
-			// aapt resource value: 0x7F0D0007
-			public const int logo1_round = 2131558407;
 			
 			static Mipmap()
 			{

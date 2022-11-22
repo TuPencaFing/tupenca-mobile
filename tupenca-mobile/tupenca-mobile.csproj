@@ -66,6 +66,7 @@
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	  <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -74,6 +75,9 @@
 	  </Compile>
 	  <Compile Update="DetailsPage.xaml.cs">
 	    <DependentUpon>DetailsPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="ProfilePage.xaml.cs">
+	    <DependentUpon>ProfilePage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="ProximosEventosPage.xaml.cs">
 	    <DependentUpon>ProximosEventosPage.xaml</DependentUpon>
@@ -88,6 +92,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="ListPencaEmpresaPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ProximosEventosPage.xaml">
