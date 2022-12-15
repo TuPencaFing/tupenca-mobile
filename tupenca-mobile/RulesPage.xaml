@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tupenca_mobile.RulesPage"
+             Title="Reglas" BackgroundColor="{StaticResource PrimaryColor}">
+    <VerticalStackLayout>
+        <!--<Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />-->
+
+        <Label TextColor="Black" HorizontalTextAlignment="Start" FontSize="20" Text="La idea de una penca es poder sumar puntos por acertar resultados en eventos deportivos. Dichos eventos deportivos forman parte de uno o más torneos o campeonatos. " Margin="0,30,0,40"/>
+        <Label TextColor="Black" HorizontalTextAlignment="Start" FontSize="20" Text="Cada penca del sistema podrá tener dos modalidades; por un lado, la modalidad con pozo compartido y por otro la modalidad de empresas. La modalidad de empresa  solo es accesible desde la web" Margin="0,0,0,40"/>
+        <Label TextColor="Black" HorizontalTextAlignment="Start" FontSize="20" Text="En la modalidad de pozo compartido, cada penca tendrá un costo de entrada para cada usuario que participe y los ganadores dividirán el pozo generado de una manera configurable restando la comisión variable de la plataforma en función del tamaño del pozo."/>
+
+    </VerticalStackLayout>
+</ContentPage>

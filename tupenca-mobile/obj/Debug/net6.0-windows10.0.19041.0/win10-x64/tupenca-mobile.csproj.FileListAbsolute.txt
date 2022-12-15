@@ -327,6 +327,9 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-windows10.
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\logo.scale-100.png
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\logo1.scale-100.png
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\modelprofile.scale-100.png
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\timeline.scale-100.png
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\timeline2.scale-100.png
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\tupenca-mobile.AssemblyInfoInputs.cache
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\tupenca-mobile.AssemblyInfo.cs

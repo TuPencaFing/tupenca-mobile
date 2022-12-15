@@ -7,26 +7,43 @@
     Shell.FlyoutBehavior="Disabled"
     xmlns:view ="clr-namespace:tupenca_mobile">
 
+    <Shell.Resources>
+        <Style x:Key="MyPageStyle" TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#E76F51" />
+            <Setter Property="Shell.TitleColor" Value="White" />
 
+        </Style>
+    </Shell.Resources>
     <ShellItem Route="main">
         <ShellContent ContentTemplate="{DataTemplate view:MainPage}" />
     </ShellItem>
 
-    <ShellItem Route="list">
-        <ShellContent Title="Pencas" ContentTemplate="{DataTemplate view:ListPencaPage}" />
-    </ShellItem>
+
 
     <TabBar>
-        <Tab Title="Penca" Route="details">
-            <ShellContent Route = "ranking" Title="Ranking"
-                         ContentTemplate="{DataTemplate view:DetailsPage}"/>
-            <ShellContent Route = "proximosEventos" Title="Proximos Eventos"
-                         ContentTemplate="{DataTemplate view:ProximosEventosPage}"/>
+        <Tab Title="Pencas" Route="list">
+            <ShellContent Style="{StaticResource MyPageStyle}"
 
+ Title="Pencas" ContentTemplate="{DataTemplate view:ListPencaPage}" />
         </Tab>
         <Tab  Title="Profile">
-            <ShellContent Route="profile" Title="Pencas" ContentTemplate="{DataTemplate view:ProfilePage}" />
+            <ShellContent Style="{StaticResource MyPageStyle}"
+
+ Route="profile" Title="Pencas" ContentTemplate="{DataTemplate view:ProfilePage}" />
         </Tab>
     </TabBar>
+    <Tab Title="Penca" Route="details">
+        <ShellContent Style="{StaticResource MyPageStyle}"
 
+ Route = "ranking" Title="Ranking"
+                         ContentTemplate="{DataTemplate view:DetailsPage}"/>
+        <ShellContent Style="{StaticResource MyPageStyle}"
+
+ Route = "proximosEventos" Title="Proximos Eventos"
+                         ContentTemplate="{DataTemplate view:ProximosEventosPage}"/>
+        <ShellContent Style="{StaticResource MyPageStyle}"
+
+ Route = "eventosPasados" Title="Eventos Pasados"
+                         ContentTemplate="{DataTemplate view:EventosPasadosPage}"/>
+    </Tab>
 </Shell>

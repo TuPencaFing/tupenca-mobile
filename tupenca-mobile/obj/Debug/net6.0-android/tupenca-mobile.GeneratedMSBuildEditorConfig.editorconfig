@@ -27,6 +27,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = tupenca_mobile.DetailsPage
 build_metadata.AdditionalFiles.TargetPath = DetailsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = DetailsPage.xaml
 
+[C:/Users/mati9/Desktop/tupenca-mobile/tupenca-mobile/EventosPasadosPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = tupenca_mobile.EventosPasadosPage.xaml
+build_metadata.AdditionalFiles.TargetPath = EventosPasadosPage.xaml
+build_metadata.AdditionalFiles.RelativePath = EventosPasadosPage.xaml
+
 [C:/Users/mati9/Desktop/tupenca-mobile/tupenca-mobile/ListPencaEmpresaPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = tupenca_mobile.ListPencaEmpresaPage.xaml
@@ -68,3 +74,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = tupenca_mobile.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/mati9/Desktop/tupenca-mobile/tupenca-mobile/RulesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = tupenca_mobile.RulesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RulesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RulesPage.xaml

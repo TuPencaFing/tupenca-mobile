@@ -17,6 +17,7 @@ namespace tupenca_mobile.ViewModel
     [QueryProperty("Title", "Title")]
     [QueryProperty("Pozo", "Pozo")]
     [QueryProperty("Costo", "Costo")]
+    [QueryProperty("Image", "Image")]
 
     public partial class PencaCompartidaDetailsViewModel : BaseViewModel
     {
@@ -38,18 +39,21 @@ namespace tupenca_mobile.ViewModel
         String pozo;
         [ObservableProperty]
         String costo;
-
+        [ObservableProperty]
+        String image;
         async partial void OnPencaCompartidaIdChanged(string value)
         {
             //pencaCompartida = Newtonsoft.Json.JsonConvert.DeserializeObject<PencaCompartidaDto>(pencaCompartidaDto);
-             await getUsuariosByPencaAsync();
-             await GetProximosEventosAsync();
-
+            await getUsuariosByPencaAsync();
+            await getEventosPasadosAsync();
+            await GetProximosEventosAsync();
         }
 
         public ObservableCollection<UsuarioScoreExtended> UsuariosScore { get; } = new();
 
         public ObservableCollection<EventoPrediccionDto> ProximosEventos { get; } = new();
+
+        public ObservableCollection<EventoPrediccionDto> EventosPasados { get; } = new();
 
         [RelayCommand]
         async void BackAsync()
@@ -60,14 +64,22 @@ namespace tupenca_mobile.ViewModel
         [RelayCommand]
         private async Task IngresarResultadoAsync(EventoPrediccionDto eventoPrediccion)
         {
-            System.Diagnostics.Debug.WriteLine(" the selected item's name  is:  ");
-            restService.ingresarPrediccion(int.Parse(pencaCompartidaId), eventoPrediccion.Id, eventoPrediccion.Prediccion);
+            if(!eventoPrediccion.IsEmpateValid && eventoPrediccion.Prediccion.PuntajeEquipoLocal == eventoPrediccion.Prediccion.PuntajeEquipoVisitante)
+            {
+                await Shell.Current.DisplayAlert("Error!", "La prediccion de empate no es valida", "OK");
+            }
+            else
+            {
+                restService.ingresarPrediccion(int.Parse(pencaCompartidaId), eventoPrediccion.Id, eventoPrediccion.Prediccion);
+
+            }
             // Here we can remove the seletced obj from the data
         }
         public async Task getUsuariosByPencaAsync()
         {
             try
             {
+                IsBusy = true;
                 var usuariosScore = await restService.getUsersByPenca(int.Parse(pencaCompartidaId));
 
                 UsuariosScore.Clear();
@@ -75,11 +87,11 @@ namespace tupenca_mobile.ViewModel
                 for(int i=0; i<usuariosScore.Count;i++)
                 {
                     var usuarioScoreExtended = new UsuarioScoreExtended() { usuarioScore = usuariosScore[i], Position = i + 1 };
-                    if (usuariosScore[i].ID == restService.myId)
+                    if (usuariosScore[i].Id == restService.myId)
                     {
-                        myScore = usuariosScore[i].TotalScore.ToString();
+                        myScore = usuariosScore[i].Score.ToString();
                         MyPosition = (i + 1).ToString();
-                        usuarioScoreExtended.color = Colors.LightBlue;
+                        usuarioScoreExtended.Color = Color.FromArgb("#f5aa6d");
                     }
                     UsuariosScore.Add(usuarioScoreExtended);
                 }
@@ -89,7 +101,12 @@ namespace tupenca_mobile.ViewModel
                 Debug.WriteLine($"Unable to get usuarios: {ex.Message}");
                 await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
             }
-            
+            finally
+            {
+                IsBusy = false;
+
+            }
+
         }
 
         public async Task GetProximosEventosAsync()
@@ -97,6 +114,7 @@ namespace tupenca_mobile.ViewModel
 
             try
             {
+                IsBusy = true;
                 var eventos = await restService.getEventosProximos(int.Parse(pencaCompartidaId));
                 ProximosEventos.Clear();
 
@@ -114,7 +132,34 @@ namespace tupenca_mobile.ViewModel
             {
                 Debug.WriteLine($"Unable to get eventos: {ex.Message}");
                 await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            } finally { IsBusy = false; }
+
+        }
+
+        public async Task getEventosPasadosAsync()
+        {
+
+            try
+            {
+                var eventos = await restService.getEventosPasados(int.Parse(pencaCompartidaId));
+                EventosPasados.Clear();
+
+                foreach (var evento in eventos)
+                {
+                    if (evento.Prediccion == null)
+                        evento.Prediccion = new PrediccionDto();
+                    EventosPasados.Add(evento);
+
+                }
+
+
             }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Unable to get eventos: {ex.Message}");
+                await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            }
+            finally { IsBusy = false; }
 
         }
     }

@@ -16,7 +16,7 @@
                 <Grid ColumnDefinitions="*,Auto,*" RowDefinitions="100, Auto">
                     <BoxView
                         Grid.ColumnSpan="3"
-                        Background="#2c3e50"
+                        Background="#E76F51"
                         HeightRequest="100"
                         HorizontalOptions="FillAndExpand" />
                     <Frame
@@ -34,7 +34,7 @@
                             HeightRequest="100"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            Source="https://image.shutterstock.com/image-photo/soccer-ball-cleats-on-football-260nw-103330400.jpg"
+                            Source="{Binding Image}"
                             BackgroundColor="Black"
                             WidthRequest="100"/>
                     </Frame>
@@ -109,5 +109,12 @@
                 Command="{Binding BackAsyncCommand}"
                 Style="{StaticResource ButtonOutline}"
                 Margin="8"/>
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Grid.RowSpan="2"
+                           Grid.ColumnSpan="4"/>
     </Grid>
+    
 </ContentPage>

@@ -21,12 +21,13 @@ namespace tupenca_mobile.ViewModel
         public string _deviceToken;
 
         [ObservableProperty]
-        bool isLoggedIn = false;
-
-        [ObservableProperty]
         string username;
         [ObservableProperty]
         string password;
+        [ObservableProperty]
+        UsuarioDto user;
+        [ObservableProperty]
+        bool userHasEmpresas = false;
         public ObservableCollection<PencaCompartidaDto> PencasCompartidas { get; } = new();
 
 
@@ -43,6 +44,7 @@ namespace tupenca_mobile.ViewModel
 
             try
             {
+                IsBusy = true;
                 var pencasCompartidas = await restService.RefreshDataAsync();
 
                 if (pencasCompartidas.Count != 0)
@@ -57,6 +59,58 @@ namespace tupenca_mobile.ViewModel
                 Debug.WriteLine($"Unable to get pencas: {ex.Message}");
                 await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
             }
+            finally
+            {
+                IsBusy = false;
+            }
+
+        }
+
+        async Task RegisterUserToken()
+        {
+
+            try
+            {
+                IsBusy = true;
+                await restService.RegisterToken(_deviceToken);
+
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Unable to get pencas: {ex.Message}");
+                await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+
+        }
+
+        async Task GetUserInformation()
+        {
+
+            try
+            {
+                IsBusy = true;
+                User = await restService.getUserInformation();
+                if(User.Empresas != null && user.Empresas.Count>0)
+                {
+                    UserHasEmpresas = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Unable to get pencas: {ex.Message}");
+                await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            }
+            finally
+            {
+                IsBusy = false;
+
+            }
 
         }
 
@@ -68,12 +122,17 @@ namespace tupenca_mobile.ViewModel
 
             try
             {
+                IsBusy = true;
                 await restService.Login(username, password);
             }
             catch (Exception ex)
             {
                 Debug.WriteLine($"Unable to login: {ex.Message}");
                 await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            }
+            finally
+            {
+                IsBusy = false;
             }
             //{
 
@@ -104,6 +163,40 @@ namespace tupenca_mobile.ViewModel
         }
 
         [RelayCommand]
+        async Task GoToRulesAsync(object args)
+        {
+
+            try
+            {
+                await Shell.Current.GoToAsync("rulesPage");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Unable to login: {ex.Message}");
+                await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            }
+        }
+
+        [RelayCommand]
+        async Task LogoutAsync(object args)
+        {
+
+            try
+            {
+                Username = null;
+                Password = null;
+                await Shell.Current.GoToAsync("//main");
+                UserHasEmpresas = false;
+                PencasCompartidas.Clear();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error: {ex.Message}");
+                await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            }
+        }
+
+        [RelayCommand]
         async Task GoToDetails(PencaCompartidaDto penca)
         {
             if (penca == null)
@@ -115,11 +208,13 @@ namespace tupenca_mobile.ViewModel
             //});
             //var stringPencaDto = Newtonsoft.Json.JsonConvert.SerializeObject(penca);
             var a = Shell.Current.CurrentState.Location.ToString();
-            await Shell.Current.GoToAsync($"//proximosEventos?PencaCompartidaId={penca.Id}&Title={penca.Title}&Pozo={penca.Pozo}&Costo={penca.CostEntry}");
+            await Shell.Current.GoToAsync($"//proximosEventos?PencaCompartidaId={penca.Id}&Title={penca.Title}&Pozo={penca.Pozo}&Costo={penca.CostEntry}&Image={penca.Image}");
         }
         void HandleConnection(object sender, EventArgs a)
         {
             GetPencasCompartidasAsync();
+            GetUserInformation();
+            RegisterUserToken();
         }
 
 

@@ -25,7 +25,7 @@
                                         CommandParameter="{Binding .}"/>
                             </Frame.GestureRecognizers>
                                 <Grid Padding="0" ColumnDefinitions="100,2.5*,*">
-                                    <Image Aspect="AspectFill" Source="logo1.png" BackgroundColor="Black"
+                                    <Image Aspect="AspectFill" Source="{Binding Image}" BackgroundColor="Black"
                                        WidthRequest="100"
                                        HeightRequest="100"/>
                                     <VerticalStackLayout
@@ -55,7 +55,8 @@
                            IsRunning="{Binding IsBusy}"
                            HorizontalOptions="FillAndExpand"
                            VerticalOptions="CenterAndExpand"
-                           Grid.RowSpan="2"
-                           Grid.ColumnSpan="2"/>
+                           Grid.ColumnSpan="2"
+                           Grid.RowSpan="2"/>
+
     </Grid>
 </ContentPage>

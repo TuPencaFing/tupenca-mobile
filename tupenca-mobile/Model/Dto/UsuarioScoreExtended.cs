@@ -8,11 +8,11 @@ namespace tupenca_mobile.Model.Dto
 {
     public class UsuarioScoreExtended
     {
-        public UsuarioScoreDTO usuarioScore { get; set; }
+        public PuntajeUsuarioPencaDto usuarioScore { get; set; }
 
         public int Position { get; set; }
 
-        public Color color { get; set; } = Colors.White;
+        public Color Color { get; set; } = Colors.White;
 
     }
 }

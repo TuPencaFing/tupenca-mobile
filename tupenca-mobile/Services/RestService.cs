@@ -25,6 +25,9 @@ namespace tupenca_mobile.Services
         public List<EventoPrediccionDto> eventoList { get; private set; }
         public int myId { get; private set; }
 
+        public string webSite { get; private set; } = "https://tupenca-back20221107193837.azurewebsites.net/api";
+        //public string webSite { get; private set; } = "https://10.0.2.2:7028/api";
+
         public RestService()
         {
 #if DEBUG
@@ -43,7 +46,7 @@ namespace tupenca_mobile.Services
         {
             userList = new List<PencaCompartidaDto>();
 
-            Uri uri = new Uri(string.Format("https://10.0.2.2:7028/api/pencas-compartidas/me", string.Empty));
+            Uri uri = new Uri(string.Format($"{webSite}/pencas-compartidas/me", string.Empty));
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(uri);
@@ -65,7 +68,7 @@ namespace tupenca_mobile.Services
         {
             var user = new PencaCompartidaDto();
 
-            Uri uri = new Uri(string.Format($"https://10.0.2.2:7028/api/pencas-compartidas/{pencaId}", string.Empty));
+            Uri uri = new Uri(string.Format($"{webSite}/pencas-compartidas/{pencaId}", string.Empty));
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(uri);
@@ -82,11 +85,32 @@ namespace tupenca_mobile.Services
             return user;
         }
 
+        public async Task<UsuarioDto> getUserInformation()
+        {
+            var user = new UsuarioDto();
+
+            Uri uri = new Uri(string.Format($"{webSite}/usuarios/{myId}", string.Empty));
+            try
+            {
+                HttpResponseMessage response = await _client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    user = JsonSerializer.Deserialize<UsuarioDto>(content, _serializerOptions);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"\tERROR {0}", ex.Message);
+            }
+            return user;
+        }
+
         public async Task<List<EventoPrediccionDto>> getEventosProximos(int pencaid)
         {
             eventoList = new List<EventoPrediccionDto>();
             //CHANGEEEEE
-            Uri uri = new Uri(string.Format($"https://10.0.2.2:7028/api/eventos/misproximos?penca={pencaid}", string.Empty));
+            Uri uri = new Uri(string.Format($"{webSite}/eventos/misproximos?penca={pencaid}", string.Empty));
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(uri);
@@ -104,18 +128,40 @@ namespace tupenca_mobile.Services
             return eventoList;
         }
 
-        public async Task<List<UsuarioScoreDTO>> getUsersByPenca(int pencaid)
+        public async Task<List<EventoPrediccionDto>> getEventosPasados(int pencaid)
         {
-            var usuarioScoreList = new List<UsuarioScoreDTO>();
-
-            Uri uri = new Uri(string.Format($"https://10.0.2.2:7028/api/pencas-compartidas/{pencaid}/usuarios", string.Empty));
+            eventoList = new List<EventoPrediccionDto>();
+            //CHANGEEEEE
+            Uri uri = new Uri(string.Format($"{webSite}/pencas-compartidas/{pencaid}/info?finalizadas=true", string.Empty));
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(uri);
                 if (response.IsSuccessStatusCode)
                 {
                     string content = await response.Content.ReadAsStringAsync();
-                    usuarioScoreList = JsonSerializer.Deserialize<List<UsuarioScoreDTO>>(content, _serializerOptions);
+                    eventoList = JsonSerializer.Deserialize<PencaInfoDto>(content, _serializerOptions).Eventos;
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"\tERROR {0}", ex.Message);
+            }
+
+            return eventoList;
+        }
+
+        public async Task<List<PuntajeUsuarioPencaDto>> getUsersByPenca(int pencaid)
+        {
+            var usuarioScoreList = new List<PuntajeUsuarioPencaDto>();
+
+            Uri uri = new Uri(string.Format($"{webSite}/puntaje-usuario-penca/pencas/{pencaid}", string.Empty));
+            try
+            {
+                HttpResponseMessage response = await _client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    usuarioScoreList = JsonSerializer.Deserialize<List<PuntajeUsuarioPencaDto>>(content, _serializerOptions);
                 }
             }
             catch (Exception ex)
@@ -129,7 +175,7 @@ namespace tupenca_mobile.Services
         public async Task Login(string username, string password)
         {
              accessToken = null;
-            Uri uri = new Uri(string.Format("https://10.0.2.2:7028/api/usuarios/login", string.Empty));
+            Uri uri = new Uri(string.Format($"{webSite}/usuarios/login", string.Empty));
             try
             {
                 string json = JsonSerializer.Serialize<LoginRequest>(new LoginRequest { email = username, password = password }, _serializerOptions);
@@ -153,7 +199,7 @@ namespace tupenca_mobile.Services
                 else
                 {
                     Debug.WriteLine($"not succesfull response");
-                    await Shell.Current.DisplayAlert("Error!", response.ReasonPhrase, "OK");
+                    await Shell.Current.DisplayAlert("Error!",response.Content.ReadAsStringAsync().Result, "OK");
                 }
 
             }
@@ -166,7 +212,7 @@ namespace tupenca_mobile.Services
         public async Task ingresarPrediccion(int pencaId, int eventoId, PrediccionDto prediccion)
         {
 
-            Uri uri = new Uri(string.Format($"https://10.0.2.2:7028/api/eventos/{eventoId}/prediccion?pencaId={pencaId}", string.Empty));
+            Uri uri = new Uri(string.Format($"{webSite}/eventos/{eventoId}/prediccion?pencaId={pencaId}", string.Empty));
             try
             {
                 if (prediccion.PuntajeEquipoLocal > prediccion.PuntajeEquipoVisitante)
@@ -190,6 +236,33 @@ namespace tupenca_mobile.Services
                 if (response.IsSuccessStatusCode)
                 {
                     await Shell.Current.DisplayAlert("Prediccion Ingresada!", "La prediccion a sido ingresada", "OK");
+                }
+                else
+                {
+                    Debug.WriteLine($"not succesfull response");
+                    await Shell.Current.DisplayAlert("Error!", response.ReasonPhrase, "OK");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"\tERROR {0}", ex.Message);
+            }
+
+        }
+
+        public async Task RegisterToken(string token)
+        {
+
+            Uri uri = new Uri(string.Format($"{webSite}/notification/RegisterDeviceId?deviceId={token}", string.Empty));
+            try
+            {
+                string json = "";
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = await _client.PostAsync(uri, content);
+                if (response.IsSuccessStatusCode)
+                {
                 }
                 else
                 {

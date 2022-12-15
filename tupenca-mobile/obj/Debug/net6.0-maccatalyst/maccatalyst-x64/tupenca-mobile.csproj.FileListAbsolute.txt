@@ -237,6 +237,9 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-maccatalys
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\logo.png
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\logo1.png
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\modelprofile.png
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\timeline.png
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\timeline2.png
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\mauifont.stamp

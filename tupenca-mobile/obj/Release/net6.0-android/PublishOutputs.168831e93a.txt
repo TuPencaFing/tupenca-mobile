@@ -1,0 +1,3 @@
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Release\net6.0-android\publish\com.companyname.tupenca_mobile-Signed.aab
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Release\net6.0-android\publish\com.companyname.tupenca_mobile.aab
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Release\net6.0-android\publish\com.companyname.tupenca_mobile-Signed.apk

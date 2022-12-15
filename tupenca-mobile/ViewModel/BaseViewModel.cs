@@ -44,7 +44,7 @@ public partial class BaseViewModel : ObservableObject
             string id = Preferences.Get("pencaId", "");
             var penca = await restService.getPenca(int.Parse(id));
             //GoToDetails(penca);
-            await Shell.Current.GoToAsync($"//proximosEventos?PencaCompartidaId={penca.Id}&Title={penca.Title}&Pozo={penca.Pozo}&Costo={penca.CostEntry}");
+            await Shell.Current.GoToAsync($"//proximosEventos?PencaCompartidaId={penca.Id}&Title={penca.Title}&Pozo={penca.Pozo}&Costo={penca.CostEntry}&Image={penca.Image}");
             Preferences.Remove("pencaId");
         }
     }

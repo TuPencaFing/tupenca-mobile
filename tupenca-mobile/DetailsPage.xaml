@@ -16,7 +16,7 @@
                 <Grid ColumnDefinitions="*,Auto,*" RowDefinitions="100, Auto">
                     <BoxView
                         Grid.ColumnSpan="3"
-                        Background="#2c3e50"
+                        Background="#E76F51"
                         HeightRequest="100"
                         HorizontalOptions="FillAndExpand" />
                     <Frame
@@ -34,7 +34,7 @@
                             HeightRequest="100"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            Source="https://image.shutterstock.com/image-photo/soccer-ball-cleats-on-football-260nw-103330400.jpg"
+                            Source="{Binding Image}"
                             BackgroundColor="Black"
                             WidthRequest="100"/>
                     </Frame>
@@ -57,10 +57,10 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="model:UsuarioScoreExtended">
                             <Grid Padding="10">
-                                <Frame HeightRequest="80" BackgroundColor="{Binding color}"
+                                <Frame HeightRequest="80" BackgroundColor="{Binding Color}"
                                        Style="{StaticResource CardView}">
                                     <Grid Padding="0"
-                                          ColumnDefinitions="70,50,*,*"
+                                          ColumnDefinitions="70,50,*,*" BackgroundColor="{Binding Color}"
                                           >
                                         <Label Grid.Column="0" Style="{StaticResource LargeLabel}"
                                                Text="{Binding Position}"
@@ -77,17 +77,17 @@
                                                    WidthRequest="50"
                                                    HorizontalOptions="Center"
                                                    VerticalOptions="Center"
-                                                   Source="je.png"
-                                                   BackgroundColor="Black"/>
+                                                   Source="{Binding usuarioScore.Usuario.Image}"
+                                                   />
                                         </Frame>
                                             <Label VerticalOptions="Center"
                                                              Grid.Column="2"
                                                              Padding="10" Style="{StaticResource LargeLabel}"
-                                                   Text="{Binding usuarioScore.UserName}"/>
+                                                   Text="{Binding usuarioScore.Usuario.UserName}"/>
                                         <Label VerticalOptions="Center" HorizontalOptions="End"
                                                              Grid.Column="3"
                                                              Padding="0,0,30,0" Style="{StaticResource LargeLabel}"
-                                                   Text="{Binding usuarioScore.TotalScore, StringFormat='{0} pts'}"/>
+                                                   Text="{Binding usuarioScore.Score, StringFormat='{0} pts'}"/>
                                     </Grid>
                                 </Frame>
                             </Grid>
@@ -103,5 +103,11 @@
                 Command="{Binding BackAsyncCommand}"
                 Style="{StaticResource ButtonOutline}"
                 Margin="8"/>
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Grid.RowSpan="2"
+                           Grid.ColumnSpan="4"/>
     </Grid>
 </ContentPage>

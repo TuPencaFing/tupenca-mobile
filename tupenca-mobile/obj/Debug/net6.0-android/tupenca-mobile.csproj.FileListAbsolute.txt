@@ -1,11 +1,3 @@
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\tupenca-mobile.runtimeconfig.json
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\tupenca-mobile.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\tupenca-mobile.pdb
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\com.companyname.tupenca_mobile.apk
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\com.companyname.tupenca_mobile.aab
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\com.companyname.tupenca_mobile-Signed.aab
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\com.companyname.tupenca_mobile-Signed.apk
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\com.companyname.tupenca_mobile-Signed.apk.idsig
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\googsvcsjson\values\goog_svcs_json.xml
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\build.props
@@ -18,6 +10,17 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\re
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\sp\maui_splash_image.xml
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\mauisplash.stamp
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\mauifont.stamp
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\mauiimage.stamp
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\tupenca-mobile.dll
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\tupenca-mobile.pdb
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\tupenca-mobile.runtimeconfig.json
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\tupenca-mobile.dll
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\tupenca-mobile.pdb
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\com.companyname.tupenca_mobile.apk
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\com.companyname.tupenca_mobile.aab
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\com.companyname.tupenca_mobile-Signed.aab
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\com.companyname.tupenca_mobile-Signed.apk
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\bin\Debug\net6.0-android\com.companyname.tupenca_mobile-Signed.apk.idsig
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\f\OpenSans-Bold.ttf
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\f\OpenSans-Regular.ttf
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\f\OpenSans-Semibold.ttf
@@ -34,6 +37,9 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\re
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\r\drawable-xxxhdpi\splash.png
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\r\drawable\logo.png
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\r\drawable\logo1.png
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\r\drawable\modelprofile.png
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\r\drawable\timeline.png
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\r\drawable\timeline2.png
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\r\mipmap-hdpi\appicon.png
@@ -51,7 +57,6 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\re
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\r\mipmap-xxxhdpi\appicon.png
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\r\mipmap-xxxhdpi\appicon_background.png
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\r\mipmap-xxxhdpi\appicon_foreground.png
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\mauiimage.stamp
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\res.flag
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\7DDADDD47BCA4E19-files.cache
@@ -117,8 +122,6 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\tu
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\tupenca-mobile.AssemblyInfo.cs
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\tupenca-mobile.csproj.CoreCompileInputs.cache
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\XamlC.stamp
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\tupenca-mobile.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\tupenca-mobile.pdb
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\tupenca-mobile.genruntimeconfig.cache
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\tupenca-mobile.runtimeconfig.json.bin
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\bin\com.companyname.tupenca_mobile.apk
@@ -169,12 +172,10 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\an
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\Mono.Android.Export.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\Mono.Android.Export.pdb
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\Mono.Android.pdb
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\mscorlib.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\netstandard.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\Newtonsoft.Json.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.AppContext.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Buffers.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Collections.Concurrent.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Collections.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Collections.Immutable.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Collections.NonGeneric.dll
@@ -190,7 +191,6 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\an
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Core.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Data.Common.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Data.DataSetExtensions.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Data.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Diagnostics.Contracts.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Diagnostics.Debug.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Diagnostics.DiagnosticSource.dll
@@ -201,7 +201,6 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\an
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Diagnostics.Tools.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Diagnostics.TraceSource.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Diagnostics.Tracing.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Drawing.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Drawing.Primitives.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Dynamic.Runtime.dll
@@ -236,7 +235,6 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\an
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Net.HttpListener.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Net.Mail.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Net.NameResolution.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Net.NetworkInformation.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Net.Ping.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Net.Primitives.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Net.Quic.dll
@@ -252,9 +250,7 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\an
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Numerics.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Numerics.Vectors.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.ObjectModel.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Private.CoreLib.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Private.DataContractSerialization.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Private.Uri.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Private.Xml.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Private.Xml.Linq.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Reflection.DispatchProxy.dll
@@ -321,7 +317,6 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\an
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Web.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Web.HttpUtility.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Windows.dll
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Xml.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Xml.Linq.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Xml.ReaderWriter.dll
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Xml.Serialization.dll
@@ -1046,4 +1041,11 @@ C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\st
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\resizetizer\r\drawable\timeline.png
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\mscorlib.dll
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Collections.Concurrent.dll
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Data.dll
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.dll
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Net.NetworkInformation.dll
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Private.CoreLib.dll
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Private.Uri.dll
+C:\Users\mati9\Desktop\tupenca-mobile\tupenca-mobile\obj\Debug\net6.0-android\android\assets\System.Xml.dll
